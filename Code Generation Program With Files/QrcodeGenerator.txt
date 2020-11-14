@@ -1,0 +1,12 @@
+
+//   Program to Generate QRCODE in python for info
+
+
+from PIL import Image,ImageDraw
+import qrcode
+
+def Fun ( Iterator, uniqueID):
+data=str(uniqueID)
+img=qrcode.make(data)
+namesave=code+str(Iterator)
+img.save("namesave.jpg")

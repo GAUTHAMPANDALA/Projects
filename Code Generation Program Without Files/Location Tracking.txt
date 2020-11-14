@@ -1,0 +1,18 @@
+
+
+		// Location Tracking using Python 
+
+import request
+import folium
+
+res=requests.get('https://ipinfo.io/')
+data=res.json()
+location=data['loc'].split(',')
+lat=(location[0])
+log=(location[1])
+fg=folium.FeatureGroup('my map')
+fg.add_child(foliumm.Geojson(data(open('india_states.json,'r',encoding='utff-8-sig').read())))
+fg.add_child(folium.Maker(location=[lat,log],pop='this is my location'))
+map.folium.Map(location=[lat,log],zoom_start=?)
+map.add_child(fg)
+map.save("1.html")
